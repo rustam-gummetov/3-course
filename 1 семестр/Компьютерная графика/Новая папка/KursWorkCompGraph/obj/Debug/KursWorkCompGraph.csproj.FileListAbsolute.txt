@@ -1,0 +1,29 @@
+C:\Users\User\source\repos\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.exe.config
+C:\Users\User\source\repos\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.exe
+C:\Users\User\source\repos\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.pdb
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csprojAssemblyReference.cache
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.Form1.resources
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.Properties.Resources.resources
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csproj.GenerateResource.cache
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.exe
+C:\Users\User\source\repos\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.pdb
+C:\Users\User\Desktop\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.exe.config
+C:\Users\User\Desktop\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.exe
+C:\Users\User\Desktop\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.pdb
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csprojAssemblyReference.cache
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.Form1.resources
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.Properties.Resources.resources
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csproj.GenerateResource.cache
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.exe
+C:\Users\User\Desktop\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.pdb
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.exe.config
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.exe
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\bin\Debug\KursWorkCompGraph.pdb
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csprojAssemblyReference.cache
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.Form1.resources
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.Properties.Resources.resources
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.csproj.GenerateResource.cache
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.exe
+C:\Учеба\3 курс\Компьютерная графика\Новая папка\KursWorkCompGraph\obj\Debug\KursWorkCompGraph.pdb

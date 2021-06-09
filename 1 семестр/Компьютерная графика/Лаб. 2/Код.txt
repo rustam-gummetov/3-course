@@ -1,0 +1,142 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        PictureBox pictureBox1 = new PictureBox();
+        static Bitmap flag = new Bitmap(1900, 1000);
+        Graphics flagGraphics = Graphics.FromImage(flag);
+        Graphics formGraphics = Graphics.FromImage(flag);
+        Pen BlackLine = new Pen(Color.Black, 1);
+        Pen RedLine = new Pen(Color.Red, 2);
+        SolidBrush GreenBrush = new SolidBrush(Color.Green);
+        SolidBrush WhiteBrush = new SolidBrush(Color.White);
+
+        public void FillPixel(Color color, int x1, int y1)
+        {
+            SolidBrush brush = new SolidBrush(color);
+            formGraphics.FillRectangle(brush, new Rectangle(x1, y1, 19, 19));
+        }
+
+        public void DrawGrid(Graphics flagGraphics)
+        {
+            for (int y = 0; y < 1000; y = y + 20)
+            {
+                flagGraphics.DrawLine(BlackLine, 0, y, 1900, y);
+            }
+            for (int x = 0; x < 1900; x = x + 20)
+            {
+                flagGraphics.DrawLine(BlackLine, x, 0, x, 1000);
+            }
+        }
+
+        public void DrawDDALine(Color color, int x1, int y1, int x2, int y2)
+        {
+            float x = (float)x1, y = (float)y1;
+            int dx = Math.Abs(x2 - x1) / 20, dy = Math.Abs(y2 - y1) / 20;
+            int steps = dx > dy ? dx - 1 : dy - 1;
+            FillPixel(color, x1, y1);
+            FillPixel(color, x2, y2);
+
+            if (dx > dy)
+            {
+                float d = (float)dy / steps;
+                for (int i = 0; i < steps; i++)
+                {
+                    if (x2 - x1 > 0)
+                        x += 20;
+                    else
+                        x -= 20;
+                    if (y2 - y1 < 0)
+                        y -= (d * 20);
+                    else
+                        y += (d * 20);
+                    FillPixel(color, (int)Math.Round(x), (int)(Math.Round(y / 20) * 20) + 1);
+                }
+            }
+            else
+            {
+                float d = (float)dx / steps;
+                for (int i = 0; i < steps; i++)
+                {
+                    if (y2 - y1 > 0)
+                        y += 20;
+                    else
+                        y -= 20;
+                    if (x2 - x1 < 0)
+                        x -= (d * 20);
+                    else
+                        x += (d * 20);
+                    FillPixel(color, (int)(Math.Round(x / 20) * 20) + 1, (int)Math.Round(y));
+                }
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            formGraphics.FillRectangle(WhiteBrush, new Rectangle(0, 0, 1900, 1000));
+            DrawAll();
+        }
+
+        public void DrawFigures()
+        {
+            //צהא
+            DrawDDALine(Color.Green, 1301, 181, 1701, 181);
+            DrawDDALine(Color.Green, 1501, 61, 1701, 421);
+            DrawDDALine(Color.Green, 1301, 421, 1701, 421);
+            DrawDDALine(Color.Green, 1501, 61, 1301, 421);
+            DrawDDALine(Color.Green, 1501, 541, 1301, 181);
+            DrawDDALine(Color.Green, 1501, 541, 1701, 181);
+        }
+
+        public void DrawFigureLines()
+        {
+            //star הכÿ צהא
+            flagGraphics.DrawLine(RedLine, 1300, 190, 1720, 190);
+            flagGraphics.DrawLine(RedLine, 1510, 60, 1720, 430);
+            flagGraphics.DrawLine(RedLine, 1300, 430, 1720, 430);
+            flagGraphics.DrawLine(RedLine, 1300, 430, 1510, 60);
+            flagGraphics.DrawLine(RedLine, 1300, 190, 1510, 560);
+            flagGraphics.DrawLine(RedLine, 1510, 560, 1720, 190);
+        }
+
+        public void DrawLimits()
+        {
+            DrawDDALine(Color.Red, 401, 221, 1501, 221);
+            DrawDDALine(Color.Red, 401, 221, 401, 821);
+            DrawDDALine(Color.Red, 1501, 221, 1501, 821);
+            DrawDDALine(Color.Red, 401, 821, 1501, 821);
+        }
+
+        public void DrawAll()
+        {
+            pictureBox1.Size = new Size(1900, 1000);
+            this.Controls.Add(pictureBox1);
+            DrawGrid(flagGraphics);
+            DrawLimits();
+            DrawFigures();
+            DrawFigureLines();
+            pictureBox1.Image = flag;
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DrawAll();
+            pictureBox1.Click += new EventHandler(pictureBox1_Click);
+        }
+    }
+}

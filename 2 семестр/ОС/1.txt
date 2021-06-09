@@ -1,0 +1,92 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include <QLabel>
+#include <string>
+
+using namespace std;
+
+int m = 3, n = 3;
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    QGraphicsScene *PalletScene = new QGraphicsScene(0,0,900,150,this);
+    ui->graphicsView->setScene(PalletScene);
+    QBrush br(Qt::red);
+    QPen pen(Qt::black);
+    PalletScene->addRect(0,0,100, 35,pen, br);
+
+    connect(ui->pb_mleft, SIGNAL(clicked()), this, SLOT(m_reduce()));
+    connect(ui->pb_mright, SIGNAL(clicked()), this, SLOT(m_increase()));
+    connect(ui->pb_nleft, SIGNAL(clicked()), this, SLOT(n_reduce()));
+    connect(ui->pb_nright, SIGNAL(clicked()), this, SLOT(n_increase()));
+    connect(ui->pb_ok, SIGNAL(clicked()), this, SLOT(ok()));
+    connect(ui->pb_begin, SIGNAL(clicked()), this, SLOT(begin()));
+    connect(ui->pb_restart, SIGNAL(clicked()), this, SLOT(restart()));
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::m_reduce() {
+    QString label;
+    if (m > 3)
+    {
+        m--;
+        label = QString::number(m);
+        ui->label_mdigit->setText(label);
+    }
+}
+
+void MainWindow::m_increase() {
+    QString label;
+    if (m < 10)
+    {
+        m++;
+        label = QString::number(m);
+        ui->label_mdigit->setText(label);
+    }
+}
+
+void MainWindow::n_reduce() {
+    QString label;
+    if (n > 3)
+    {
+        n--;
+        label = QString::number(n);
+        ui->label_ndigit->setText(label);
+    }
+}
+
+void MainWindow::n_increase() {
+    QString label;
+    if (n < 10)
+    {
+        n++;
+        label = QString::number(n);
+        ui->label_ndigit->setText(label);
+    }
+}
+
+void MainWindow::ok() {
+    ui->pb_mleft->setEnabled(false);
+    ui->pb_mright->setEnabled(false);
+    ui->pb_nleft->setEnabled(false);
+    ui->pb_nright->setEnabled(false);
+    ui->pb_ok->setEnabled(false);
+    ui->pb_begin->setVisible(true);
+
+
+}
+
+void MainWindow::begin() {
+
+}
+
+void MainWindow::restart() {
+
+}

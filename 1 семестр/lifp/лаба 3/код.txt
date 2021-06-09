@@ -1,0 +1,11 @@
+predicates
+	name(String)
+	action(String)
+	solution(String, String, String, String, String, String)
+	print
+	
+clauses
+	name("A").
+	name("B").
+	name("C").
+	

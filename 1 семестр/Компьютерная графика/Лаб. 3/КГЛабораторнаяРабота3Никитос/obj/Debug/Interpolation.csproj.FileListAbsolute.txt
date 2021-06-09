@@ -1,0 +1,49 @@
+D:\Programming\lib\Interpolation\bin\Debug\Interpolation.exe.config
+D:\Programming\lib\Interpolation\bin\Debug\Interpolation.exe
+D:\Programming\lib\Interpolation\bin\Debug\Interpolation.pdb
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.csprojAssemblyReference.cache
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.Form1.resources
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.Properties.Resources.resources
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.csproj.GenerateResource.cache
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.csproj.CoreCompileInputs.cache
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.exe
+D:\Programming\lib\Interpolation\obj\Debug\Interpolation.pdb
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\bin\Debug\Interpolation.exe.config
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\bin\Debug\Interpolation.exe
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\bin\Debug\Interpolation.pdb
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.csprojAssemblyReference.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.Form1.resources
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.Properties.Resources.resources
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.csproj.GenerateResource.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.csproj.CoreCompileInputs.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.exe
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3\obj\Debug\Interpolation.pdb
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\bin\Debug\Interpolation.exe.config
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\bin\Debug\Interpolation.exe
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\bin\Debug\Interpolation.pdb
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.csprojAssemblyReference.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.Form1.resources
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.Properties.Resources.resources
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.csproj.GenerateResource.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.csproj.CoreCompileInputs.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.exe
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3 — копия\obj\Debug\Interpolation.pdb
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\bin\Debug\Interpolation.exe.config
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\bin\Debug\Interpolation.exe
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\bin\Debug\Interpolation.pdb
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.csprojAssemblyReference.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.Form1.resources
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.Properties.Resources.resources
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.csproj.GenerateResource.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.csproj.CoreCompileInputs.cache
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.exe
+C:\Users\makss\OneDrive\Рабочий стол\2020\КГ\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.pdb
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\bin\Debug\Interpolation.exe.config
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\bin\Debug\Interpolation.exe
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\bin\Debug\Interpolation.pdb
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.csprojAssemblyReference.cache
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.Form1.resources
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.Properties.Resources.resources
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.csproj.GenerateResource.cache
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.exe
+C:\Учеба\3 курс\Компьютерная графика\Лаб. 3\КГЛабораторнаяРабота3Никитос\obj\Debug\Interpolation.pdb

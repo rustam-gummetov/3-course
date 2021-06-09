@@ -1,0 +1,274 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        PictureBox pictureBox1 = new PictureBox();       
+        static Bitmap flag = new Bitmap(1900, 1000);
+
+        Graphics flagGraphics = Graphics.FromImage(flag);
+        Graphics formGraphics = Graphics.FromImage(flag);
+
+        Pen BlackLine = new Pen(Color.Black, 1);
+        Pen RedLine = new Pen(Color.Red, 2);
+        SolidBrush GreenBrush = new SolidBrush(Color.Green);
+        SolidBrush WhiteBrush = new SolidBrush(Color.White);
+        //Label label1 = new Label();
+
+        public void FillPixel(int x1, int y1)
+        {
+            
+            //formGraphics = Graphics.FromImage(flag);
+            formGraphics.FillRectangle(GreenBrush, new Rectangle(x1, y1, 19, 19));
+            //GreenBrush.Dispose();
+            //formGraphics.Dispose();
+        }
+
+        public void DrawGrid(Graphics flagGraphics)
+        {
+            for (int y = 0; y < 1000; y = y + 20)
+            {
+                flagGraphics.DrawLine(BlackLine, 0, y, 1900, y);
+            }
+            for (int x = 0; x < 1900; x = x + 20)
+            {
+                flagGraphics.DrawLine(BlackLine, x, 0, x, 1000);
+            }
+        }
+
+        public void DrawBrezenhanLine(int x1, int y1, int x2, int y2)
+        {
+            int x, y, dx = Math.Abs(x2 - x1) / 20, dy = Math.Abs(y2 - y1) / 20;
+            x = x1;
+            y = y1;
+            FillPixel(x1, y1);
+            FillPixel(x2, y2);
+            if (dx > dy)
+            {
+                int d = (dy * 2 - dx), d1 = (dy * 2), d2 = ((dy - dx) * 2);
+                if (x < x2)
+                    x2 -= 20;
+                else
+                    x2 += 20;
+                while (x < x2 ? x < x2 : x > x2)
+                {
+                    if ((x2 - x1) < 0)
+                        x -= 20;
+                    else
+                        x += 20;
+                    if (d < 0)
+                        d += d1;
+                    else
+                    {
+                        if ((y2 - y1) < 0)
+                            y -= 20;
+                        else
+                            y += 20;
+                        d += d2;
+                    }
+                    FillPixel(x, y);
+                }
+            }
+            else
+            {
+                int d = (dx * 2 - dy), d1 = (dx * 2), d2 = ((dx - dy) * 2);
+                if (y < y2)
+                    y2 -= 20;
+                else
+                    y2 += 20;
+                while (y < y2 ? y < y2 : y > y2)
+                {
+                    if ((y2 - y1) < 0)
+                        y -= 20;
+                    else
+                        y += 20;
+                    if (d < 0)
+                        d += d1;
+                    else
+                    {
+                        if ((x2 - x1) < 0)
+                            x -= 20;
+                        else
+                            x += 20;
+                        d += d2;
+                    }
+                    FillPixel(x, y);
+                }
+            }           
+        }
+
+        public void DrawDDALine(int x1, int y1, int x2, int y2)
+        {
+            float x = (float)x1, y = (float)y1;
+            int dx = Math.Abs(x2 - x1) / 20, dy = Math.Abs(y2 - y1) / 20;
+            int steps = dx > dy ? dx - 1 : dy - 1;
+            FillPixel(x1, y1);
+            FillPixel(x2, y2);
+            
+            if (dx > dy)
+            {
+                float d = (float)dy / steps;
+                for (int i = 0; i < steps; i++)
+                {
+                    if (x2 - x1 > 0)
+                        x += 20;
+                    else
+                        x -= 20;
+                    if (y2 - y1 < 0)
+                        y -= (d * 20);
+                    else
+                        y += (d * 20);
+                    FillPixel((int)Math.Round(x), (int)(Math.Round(y / 20) * 20) + 1);
+                }
+            }
+            else
+            {
+                float d = (float)dx / steps;
+                for (int i = 0; i < steps; i++)
+                {
+                    if (y2 - y1 > 0)
+                        y += 20;
+                    else
+                        y -= 20;
+                    if (x2 - x1 < 0)
+                        x -= (d * 20);
+                    else
+                        x += (d * 20);
+                    FillPixel((int)(Math.Round(x / 20) * 20) + 1, (int)Math.Round(y));
+                }
+            }           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            formGraphics.FillRectangle(WhiteBrush, new Rectangle(0, 0, 1900, 1000));
+            //formGraphics.Clear(Color.White);
+            //if (pictureBox1.Image != null)
+            //{
+            //    pictureBox1.Image.Dispose();
+            //    pictureBox1.Image = null;
+            //}        
+            DrawAll();
+        }
+
+        public void DrawFigures()
+        {
+            //брезенхам
+            DrawBrezenhanLine(701, 181, 1101, 181);
+            DrawBrezenhanLine(901, 61, 1101, 421);
+            DrawBrezenhanLine(701, 421, 1101, 421);
+            DrawBrezenhanLine(701, 421, 901, 61);
+            DrawBrezenhanLine(701, 181, 901, 541);
+            DrawBrezenhanLine(901, 541, 1101, 181);
+
+            //цда
+            DrawDDALine(1301, 181, 1701, 181);
+            DrawDDALine(1501, 61, 1701, 421);
+            DrawDDALine(1301, 421, 1701, 421);
+            //DrawDDALine(701, 421, 901, 61);
+            DrawDDALine(1501, 61, 1301, 421);
+            //DrawDDALine(701, 181, 901, 541);
+            DrawDDALine(1501, 541, 1301, 181);
+            DrawDDALine(1501, 541, 1701, 181);
+        }
+
+        public void DrawFigureLines()
+        {
+            //star для брезенхама
+            flagGraphics.DrawLine(RedLine, 700, 190, 1120, 190);
+            flagGraphics.DrawLine(RedLine, 910, 60, 1120, 430);
+            flagGraphics.DrawLine(RedLine, 700, 430, 1120, 430);
+            flagGraphics.DrawLine(RedLine, 700, 430, 910, 60);
+            flagGraphics.DrawLine(RedLine, 700, 190, 910, 560);
+            flagGraphics.DrawLine(RedLine, 910, 560, 1120, 190);
+
+            //star для цда
+            flagGraphics.DrawLine(RedLine, 1300, 190, 1720, 190);
+            flagGraphics.DrawLine(RedLine, 1510, 60, 1720, 430);
+            flagGraphics.DrawLine(RedLine, 1300, 430, 1720, 430);
+            flagGraphics.DrawLine(RedLine, 1300, 430, 1510, 60);
+            flagGraphics.DrawLine(RedLine, 1300, 190, 1510, 560);
+            flagGraphics.DrawLine(RedLine, 1510, 560, 1720, 190);
+        }
+
+        public void Labels()
+        {
+            Label label1 = new Label();
+            label1.Location = new Point(741, 601);
+            label1.Text = "Алгоритм Брезенхама";
+            Controls.Add(label1);
+            label1.Parent = pictureBox1;
+            label1.Font = new Font(label1.Font.FontFamily, 24.0f, label1.Font.Style);
+            label1.Width = 339;
+            label1.Height = 39;
+
+            Label label2 = new Label();
+            label2.Location = new Point(1401, 601);
+            label2.Text = "Алгоритм ЦДА";
+            Controls.Add(label2);
+            label2.Parent = pictureBox1;
+            label2.Font = new Font(label2.Font.FontFamily, 24.0f, label2.Font.Style);
+            label2.Width = 239;
+            label2.Height = 39;
+        }
+
+        public void DrawRandomLine()
+        {
+            Random rnd = new Random();
+            int x2 = rnd.Next(1, 33);
+            int y2 = rnd.Next(50);
+            int x1 = rnd.Next(x2 - 1);
+            int y1 = rnd.Next(50);
+            DrawBrezenhanLine(x1 * 20 + 1, y1 * 20 + 1, x2 * 20 + 1, y2 * 20 + 1);
+            if (y2 > y1)
+                flagGraphics.DrawLine(RedLine, x1 * 20, y1 * 20, x2 * 20 + 20, y2 * 20 + 20);
+            else if (y2 < y1)
+                flagGraphics.DrawLine(RedLine, x1 * 20, y1 * 20 + 20, x2 * 20 + 20, y2 * 20);
+            else
+                flagGraphics.DrawLine(RedLine, x1 * 20, y1 * 20 + 10, x2 * 20 + 20, y2 * 20 + 10);
+        }
+
+        public void DrawAll()
+        {
+            pictureBox1.Size = new Size(1900, 1000);
+            this.Controls.Add(pictureBox1);
+
+            DrawGrid(flagGraphics);
+
+            DrawRandomLine();
+            /////////
+            //линия
+            //DrawBrezenhanLine(201, 281, 541, 201);
+
+            //flagGraphics.DrawLine(RedLine, 200, 300, 560, 200); // red line
+            //////
+            DrawFigures();
+            DrawFigureLines();
+
+            pictureBox1.Image = flag;
+
+            Labels();
+        }
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DrawAll();
+
+            pictureBox1.Click += new EventHandler(pictureBox1_Click);
+        }
+    }
+}

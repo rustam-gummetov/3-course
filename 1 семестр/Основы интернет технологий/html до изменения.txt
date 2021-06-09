@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>Сайт</title>
+
+<script type="text/javascript" src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="formMain" id="formMain">
+    <!-- <form class="form" id="f1">
+        <div class="headerForm">
+            <p class="header"> Новые задачи </p>
+            <button onclick="return false" data-action="delete-column" class="close">
+                <img src="картинки/x.png" alt="Удалить" data-action="delete-column" class="closePicture">
+            </button>
+            
+        </div>
+        
+
+        <div class="bodyForm">
+
+            <div class="taskForm" data-action="body" id="0">
+
+                <div class="emptyList" id="emptyList">
+                    <p class="emptyMarc"> Список пуст </p>
+                </div>
+
+
+            </div>
+
+            
+
+            <div class="addTask">
+                <button class="addTaskButton">
+                    <p class="addTaskMark"> Добавить задачу </p>
+                </button>
+            </div>
+
+        </div>
+    </form>
+
+    <form class="form">
+
+        <div class="headerForm">
+            <p class="header"> В работе </p>
+            <button onclick="return false" data-action="delete-column" class="close">
+                <img src="картинки/x.png" alt="Удалить" data-action="delete-column" class="closePicture">
+            </button>
+            
+        </div>
+        
+
+        <div class="bodyForm">
+
+
+            <div class="taskForm" data-action="body" id="1">
+
+                <div class="emptyList" id="emptyList">
+                    <p class="emptyMarc"> Список пуст </p>
+                </div>
+
+            </div>
+
+            <div class="addTask">
+                <button class="addTaskButton">
+                    <p class="addTaskMark"> Добавить задачу </p>
+                </button>
+            </div>
+        
+        
+
+        </div>
+    </form>
+
+    <form class="form">
+
+        <div class="headerForm">
+            <p class="header"> Завершены </p>
+            <button onclick="return false" data-action="delete-column" class="close">
+                <img src="картинки/x.png" alt="Удалить" data-action="delete-column" class="closePicture">
+            </button>
+            
+        </div>
+        
+
+        <div class="bodyForm">
+
+            <div class="taskForm" data-action="body" id="2">
+
+                <div class="emptyList" id="emptyList">
+                    <p class="emptyMarc"> Список пуст </p>
+                </div>
+                
+            </div>
+
+            <div class="addTask">
+                <button class="addTaskButton">
+                    <p class="addTaskMark"> Добавить задачу </p>
+                </button>
+            </div>
+        
+        
+
+        </div>
+    </form> -->
+</div>
+
+<div class="addForm">
+    <button class="addFormButton">
+        <p class="addFormMark"> Добавить <br> колонку </p>
+    </button>
+</div>
+
+<script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
